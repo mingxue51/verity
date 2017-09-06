@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:wheel="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_actionbar"
+        layout="@layout/toolbar_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:text="V-Lock Verification"
+            android:textColor="#FFF"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:text="Step - 1"
+            android:textColor="#FFF"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="Please upload your selfie picture"
+            android:textColor="#FFF"
+            android:textSize="16sp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/image"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center_horizontal"
+                fresco:placeholderImage="@drawable/camera_big_icon"
+                fresco:roundAsCircle="true"
+                fresco:roundingBorderColor="#FFF"
+                fresco:roundingBorderWidth="5dp"/>
+
+            <com.pnikosis.Yanrialishprogress.ProgressWheel
+                android:id="@+id/progress_wheel"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="8dp"
+                android:visibility="invisible"
+                wheel:matProg_barColor="@color/myPrimaryColor"
+                wheel:matProg_progressIndeterminate="true"/>
+
+            <ImageView
+                android:id="@+id/iconStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/image"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/wrong_icon_with_red_bg"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/errorLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/pleaseReCapture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:text="@string/please_re_capture"
+                android:textColor="#FFF"
+                android:textSize="16sp"
+                android:visibility="visible"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/pleaseReCapture"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_toLeftOf="@id/pleaseReCapture"
+                android:background="@drawable/error_icon"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnCapturePhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/btn_red"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:text="Capture Photo"
+            android:textAllCaps="false"
+            android:textColor="#FFF"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+</LinearLayout>

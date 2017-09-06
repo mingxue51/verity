@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper
+    android:id="@+id/viewFlipper"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/app_logo"/>
+
+            <com.rengwuxian.Yanrialedittext.YanrialEditText
+                android:id="@+id/email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:hint="@string/email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                app:met_errorColor="@color/myPrimaryColor"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="#cdd1d3"
+                app:met_textColor="#FFF"
+                app:met_textColorHint="#5b6269"
+                app:met_underlineColor="#5b6269"/>
+
+            <com.rengwuxian.Yanrialedittext.YanrialEditText
+                android:id="@+id/password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                app:met_errorColor="@color/myPrimaryColor"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="#cdd1d3"
+                app:met_textColor="#FFF"
+                app:met_textColorHint="#5b6269"
+                app:met_underlineColor="#5b6269"/>
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/btn_red"
+                android:paddingLeft="60dp"
+                android:paddingRight="60dp"
+                android:text="@string/login"
+                android:textAllCaps="false"
+                android:textColor="#FFF"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/btnForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"
+                android:text="@string/forgot_password"
+                android:textAllCaps="false"
+                android:textSize="18sp"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/dont_have_account_register"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/btnRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="4dp"
+                    android:background="@android:color/transparent"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/register_here"
+                    android:textColor="@drawable/white_text_pressed"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.pnikosis.Yanrialishprogress.ProgressWheel
+            android:id="@+id/progress_wheel"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="8dp"
+            wheel:matProg_barColor="@color/myPrimaryColor"
+            wheel:matProg_progressIndeterminate="true"/>
+    </RelativeLayout>
+
+</ViewFlipper>

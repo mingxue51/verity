@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_actionbar"
+        layout="@layout/toolbar_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/toolbar_actionbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <com.rengwuxian.Yanrialedittext.YanrialEditText
+                android:id="@+id/firstName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/first_name"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName|textCapWords"
+                android:singleLine="true"
+                app:met_errorColor="@color/myPrimaryColor"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="#cdd1d3"
+                app:met_textColor="#FFF"
+                app:met_textColorHint="#5b6269"
+                app:met_underlineColor="#5b6269"/>
+
+            <com.rengwuxian.Yanrialedittext.YanrialEditText
+                android:id="@+id/lastName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/last_name"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName|textCapWords"
+                android:singleLine="true"
+                app:met_errorColor="@color/myPrimaryColor"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="#cdd1d3"
+                app:met_textColor="#FFF"
+                app:met_textColorHint="#5b6269"
+                app:met_underlineColor="#5b6269"/>
+
+            <com.rengwuxian.Yanrialedittext.YanrialEditText
+                android:id="@+id/email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                app:met_errorColor="@color/myPrimaryColor"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="#cdd1d3"
+                app:met_textColor="#FFF"
+                app:met_textColorHint="#5b6269"
+                app:met_underlineColor="#5b6269"/>
+
+            <com.rengwuxian.Yanrialedittext.YanrialEditText
+                android:id="@+id/password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                app:met_errorColor="@color/myPrimaryColor"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="#cdd1d3"
+                app:met_textColor="#FFF"
+                app:met_textColorHint="#5b6269"
+                app:met_underlineColor="#5b6269"/>
+
+
+            <com.rengwuxian.Yanrialedittext.YanrialEditText
+                android:id="@+id/confirmPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/confirm_password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                app:met_errorColor="@color/myPrimaryColor"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="#cdd1d3"
+                app:met_textColor="#FFF"
+                app:met_textColorHint="#5b6269"
+                app:met_underlineColor="#5b6269"/>
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32sp"
+                android:background="@drawable/btn_white"
+                android:paddingLeft="60dp"
+                android:paddingRight="60dp"
+                android:text="Next"
+                android:textColor="#000"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/active_step_container"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="1"
+                android:textColor="#FFF"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:alpha="0.3">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/active_step_container"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="2"
+                android:textColor="#FFF"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:alpha="0.3">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/active_step_container"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="3"
+                android:textColor="#FFF"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+    </TableRow>
+
+</RelativeLayout>

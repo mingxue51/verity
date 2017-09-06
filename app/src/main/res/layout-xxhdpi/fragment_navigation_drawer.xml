@@ -1,0 +1,71 @@
+<RelativeLayout
+    android:id="@+id/googleDrawer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/navigationHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#11171e"
+        android:paddingTop="24dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/imgAvatar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="30dp"
+            fresco:roundAsCircle="true"
+            fresco:roundingBorderColor="#FFF"
+            fresco:roundingBorderWidth="3dp"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgAvatar"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtUsername"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtCredits"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/drawerList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navigationHeader"
+        android:background="#11171e"
+        android:clickable="true"
+        android:scrollbars="vertical"/>
+
+    <!--<ImageView android:layout_width="wrap_content" android:layout_height="260dp"-->
+    <!--android:layout_below="@id/navigationHeader"-->
+    <!--android:layout_marginLeft="16dp"-->
+    <!--android:background="@drawable/sidebar_menu_options_indicator"/>-->
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_actionbar"
+        layout="@layout/toolbar_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:text="00:00"
+                    android:textSize="22sp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/btnPreview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/play_btn_with_text"/>
+
+            <Button
+                android:id="@+id/btnRecordAgain"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/btn_white"
+                android:drawableLeft="@drawable/record_again_icon"
+                android:drawablePadding="10dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="50dp"
+                android:text="Re-Record"
+                android:textAllCaps="false"
+                android:textColor="@color/myPrimaryColor"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/seperator"/>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/btn_red"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textColor="#FFF"/>
+
+            <Button
+                android:id="@+id/btnSaveAndRecordAgain"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn_white"
+                android:drawablePadding="10dp"
+                android:text="Save and Record Another"
+                android:textAllCaps="false"
+                android:textColor="#000"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

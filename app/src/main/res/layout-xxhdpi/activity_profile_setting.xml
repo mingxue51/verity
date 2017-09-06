@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_actionbar"
+        layout="@layout/toolbar_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <com.rengwuxian.Yanrialedittext.YanrialEditText
+            android:id="@+id/profile_oldpassword"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/old_password"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            app:met_errorColor="#ffcc0001"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelTextColor="#cdd1d3"
+            app:met_textColor="#fff"
+            app:met_textColorHint="@color/light_gray"/>
+
+        <com.rengwuxian.Yanrialedittext.YanrialEditText
+            android:id="@+id/profile_newpassword"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            app:met_errorColor="#ffcc0001"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelTextColor="#cdd1d3"
+            app:met_textColor="#fff"
+            app:met_textColorHint="@color/light_gray"/>
+
+
+        <com.rengwuxian.Yanrialedittext.YanrialEditText
+            android:id="@+id/profile_confirmpassword"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            app:met_errorColor="#ffcc0001"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelTextColor="#cdd1d3"
+            app:met_textColor="#fff"
+            app:met_textColorHint="@color/light_gray"/>
+
+        <Button
+            android:id="@+id/btnUpdatePassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/btn_red"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:text="Update Password"
+            android:textAllCaps="false"
+            android:textColor="#FFF"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+</LinearLayout>

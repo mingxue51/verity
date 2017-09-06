@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/bg_half_overlay"
+              android:orientation="vertical"
+              android:paddingLeft="15dp"
+              android:paddingRight="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textSize="14sp"/>
+
+        <com.rengwuxian.Yanrialedittext.YanrialEditText
+            android:id="@+id/textCreditCardName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/card_holder_name"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            app:met_errorColor="@color/myPrimaryColor"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelTextColor="#cdd1d3"
+            app:met_textColor="#FFF"
+            app:met_textColorHint="@color/light_gray"
+            app:met_underlineColor="#5b6269"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/card_number"
+            android:textSize="14sp"/>
+
+        <com.rengwuxian.Yanrialedittext.YanrialEditText
+            android:id="@+id/textCreditCardNumber"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/credit_card_number"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            app:met_errorColor="@color/myPrimaryColor"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelTextColor="#cdd1d3"
+            app:met_textColor="#FFF"
+            app:met_textColorHint="@color/light_gray"
+            app:met_underlineColor="#5b6269"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/expiry"
+            android:textSize="14sp"/>
+
+        <com.rengwuxian.Yanrialedittext.YanrialEditText
+            android:id="@+id/textCreditCardExpiry"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="MM/YYYY"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            app:met_errorColor="@color/myPrimaryColor"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelTextColor="#cdd1d3"
+            app:met_textColor="#FFF"
+            app:met_textColorHint="@color/light_gray"
+            app:met_underlineColor="#5b6269"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cvv"
+            android:textSize="14sp"/>
+
+        <com.rengwuxian.Yanrialedittext.YanrialEditText
+            android:id="@+id/textCreditCardCvv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/cvv"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            app:met_errorColor="@color/myPrimaryColor"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelTextColor="#cdd1d3"
+            app:met_textColor="#FFF"
+            app:met_textColorHint="@color/light_gray"
+            app:met_underlineColor="#5b6269"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCreditCardBuy"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_red"
+        android:text="Buy $10.00"/>
+</LinearLayout>

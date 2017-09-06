@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_half_overlay"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Coupon Code"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <com.rengwuxian.Yanrialedittext.YanrialEditText
+            android:id="@+id/couponCode"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="16dp"
+            android:hint="Enter your coupon code"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            app:met_errorColor="@color/myPrimaryColor"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelTextColor="#cdd1d3"
+            app:met_textColor="#FFF"
+            app:met_textColorHint="#5b6269"
+            app:met_underlineColor="#5b6269"/>
+
+        <Button
+            android:id="@+id/btnValidateCoupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/btn_red"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="Validate Coupon"
+            android:textAllCaps="false"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+</LinearLayout>

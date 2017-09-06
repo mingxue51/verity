@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                xmlns:wheel="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar_actionbar"
+        layout="@layout/toolbar_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <RelativeLayout
+        android:id="@+id/imageLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_actionbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/image"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:placeholderImage="@drawable/user_icon"
+            fresco:roundAsCircle="true"
+            fresco:roundingBorderColor="#CCC"
+            fresco:roundingBorderWidth="5dp"/>
+
+        <com.pnikosis.Yanrialishprogress.ProgressWheel
+            android:id="@+id/progress_wheel"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="8dp"
+            android:visibility="invisible"
+            wheel:matProg_barColor="@color/myPrimaryColor"
+            wheel:matProg_progressIndeterminate="true"/>
+
+        <ImageView
+            android:id="@+id/iconStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/image"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/wrong_icon_with_red_bg"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnTakeSelfie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32sp"
+        android:background="@drawable/btn_white"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:text="Take Selfie"
+        android:textColor="#000"
+        android:textSize="18sp"/>
+
+    <TableRow
+        android:id="@+id/afterPhoto"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageLayout"
+        android:layout_marginTop="32dp"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btnAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_red"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Accept"
+            android:textColor="#FFF"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/btnReCapture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_white"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Re-capture"
+            android:textColor="#000"
+            android:textSize="16sp"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/completed_step"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/active_step_container"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="2"
+                android:textColor="#FFF"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:alpha="0.3">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/active_step_container"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="3"
+                android:textColor="#FFF"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+    </TableRow>
+</RelativeLayout>

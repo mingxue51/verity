@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:text="Welcome Back!"
+            android:textColor="#FFF"
+            android:textSize="28sp"/>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/image"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            fresco:roundAsCircle="true"
+            fresco:roundingBorderColor="#FFF"
+            fresco:roundingBorderWidth="5dp"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:textColor="#FFF"
+                android:textSize="21sp"/>
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_centerHorizontal="true"
+                android:textColor="#FFF"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnStartVlock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_red"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="Start V-Lock"
+            android:textAllCaps="false"
+            android:textColor="#FFF"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:background="#171c22"/>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/credits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#FFF"
+                    android:textSize="30sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-6dp"
+                    android:text="Credits"
+                    android:textColor="#FFF"
+                    android:textSize="13sp"/>
+
+                <Button
+                    android:id="@+id/btnBuyCredits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/btn_red"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Buy Credits"
+                    android:textAllCaps="false"
+                    android:textColor="#FFF"
+                    android:textSize="15sp"
+                    android:textStyle="normal"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/todayjobs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#FFF"
+                    android:textSize="30sp"/>
+
+                <TextView
+                    android:id="@+id/jobsToday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-6dp"
+                    android:text="V-Locks Today"
+                    android:textColor="#FFF"
+                    android:textSize="13sp"/>
+
+                <Button
+                    android:id="@+id/btnPreviousJobs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/btn_red"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Previous V-Locks"
+                    android:textAllCaps="false"
+                    android:textColor="#FFF"
+                    android:textSize="13sp"
+                    android:textStyle="normal"/>
+            </LinearLayout>
+        </TableRow>
+    </LinearLayout>
+</ScrollView>
